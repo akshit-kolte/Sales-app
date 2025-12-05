@@ -19,8 +19,9 @@ US=st.number_input("US",min_value=0.0)
 
 #Make Pred
 if st.button('Sales'):
-    input_data = np.array([[Income, Advertising, Population, Price, ShelveLoc,
+    input_data = np.array([[CompPrice,Income, Advertising, Population, Price, ShelveLoc,
                             Age, Education, Urban, US]])
 
     prediction = model.predict(input_data)[0]
+
     st.success(f'predict sal: {prediction}')
